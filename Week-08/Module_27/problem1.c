@@ -1,10 +1,16 @@
 #include<stdio.h>
 
 struct Point{
+    public:
     int x;
     int y;
 };
 
+int manhattan(Point p1, Point p2)
+{
+    int res = abs(p1.x - p2.x) = abs(p1.y - p2.y);
+    return res;
+}
 int main()
 {
     struct Point p1 = { 1, 1 };
