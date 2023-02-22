@@ -1,14 +1,13 @@
 #include<stdio.h>
 
 struct Point{
-    public:
     int x;
     int y;
 };
 
-int manhattan(Point p1, Point p2)
+int manhattan(struct Point p1, struct Point p2)
 {
-    int res = abs(p1.x - p2.x) = abs(p1.y - p2.y);
+    int res = abs(p1.x - p2.x) + abs(p1.y - p2.y);
     return res;
 }
 int main()
@@ -17,5 +16,7 @@ int main()
     struct Point p2 = { 4, 5 };
 
     int ans = manhattan(p1, p2);
+
+    printf("Manhattan distance is %d\n", ans);
     return 0;
 }
