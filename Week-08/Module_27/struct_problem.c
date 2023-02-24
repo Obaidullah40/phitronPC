@@ -7,6 +7,13 @@ struct Student
     double marks;
 };
 
+void printStudent(int n, struct Student s)
+{
+    printf("Information of Student %d\n", n);
+    printf("Roll -> %d\n", s.roll);
+    printf("Name -> %s\n", s.name);
+    printf("Mark -> %lf\n", s.marks);
+}
 
 int main()
 {
@@ -14,7 +21,7 @@ int main()
     int i;
     for (int i = 0; i < 5; i++)
     {
-        printf("Please enter Roll -> \n");
+        printf("\nPlease enter Roll -> \n");
         scanf("%d", &cls[i].roll);
         printf("Please enter Name -> \n");
         scanf("%s", cls[i].name);
@@ -22,12 +29,12 @@ int main()
         scanf("%lf", &cls[i].marks);
     }
     
-    for (int i = 0; i < 5; i++) 
+    for (int i = 0; i < 3; i++) 
     {
-        printf("Information of Student %d\n", i);
-        printf("Roll -> %d\n", cls[i].roll);
-        printf("Name -> %s\n", cls[i].name);
-        printf("Mark -> %lf\n", cls[i].marks);
+        if (cls[i].roll % 2 == 0)
+        { 
+            printStudent(i, cls[i]);
+        }
     }
     
     return 0;
